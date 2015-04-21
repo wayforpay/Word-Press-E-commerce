@@ -112,7 +112,7 @@ function gateway_wayforpay($separator, $sessionid)
 
 
     $pay = WayForPay::getInst()->fillPayForm($forSend);
-//    echo $button;
+    echo $button;
     echo $pay;
 
     $data = array(

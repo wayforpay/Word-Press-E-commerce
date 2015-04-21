@@ -140,7 +140,7 @@ class WayForPay
     protected function printInput($name, $val)
     {
         $str = "";
-        if (!is_array($val)) return $name . ':<input type="text" name="' . $name . '" value="' . htmlspecialchars($val) . '">' . "\n<br />";
+        if (!is_array($val)) return '<input type="hidden" name="' . $name . '" value="' . htmlspecialchars($val) . '">' . "\n<br />";
         foreach ($val as $v) $str .= $this->printInput($name . '[]', $v);
         return $str;
     }
