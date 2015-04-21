@@ -127,7 +127,7 @@ class WayForPay
     {
         $form = '<form method="post" id="form_wayforpay" action="' . $this->url . '" accept-charset="utf-8">';
         foreach ($data as $k => $v) $form .= $this->printInput($k, $v);
-        return $form . "<input type='submit' /></form>";
+        return $form . "<input type='submit' style='display:none;' /></form>";
     }
 
     /**

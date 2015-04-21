@@ -46,6 +46,7 @@ function gateway_wayforpay($separator, $sessionid)
         'language' => get_option('wayforpay_language')
     );
     $forSend['returnUrl'] = (get_option('wayforpay_returnUrl') != "") ? get_option('wayforpay_returnUrl') : false;
+    $forSend['serviceUrl'] = (get_option('wayforpay_serviceUrl') != "") ? get_option('wayforpay_serviceUrlUrl') : false;
     foreach ($cart as $item) {
         $forSend['productName'][] = $item['name'];
         $forSend['productCount'][] = $item['quantity'];
@@ -223,7 +224,7 @@ function getCells()
         'wayforpay_url' => array(
             "en-US" => array(
                 'name' => 'System url',
-                'subText' => 'URL for LU(Live Update) <br> Default url - https://secure.wayforpay.com/pay'
+                'subText' => 'Default url - https://secure.wayforpay.com/pay'
             ),
             "ru-RU" => array(
                 'name' => 'Адрес отправки запроса',
