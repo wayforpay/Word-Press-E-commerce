@@ -179,7 +179,7 @@ class WayForPay
             }
 
         }
-        return null;
+        return $this->getAnswerToGateWay($inputData);
 
     }
 
